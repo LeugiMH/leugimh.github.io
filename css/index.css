@@ -1,0 +1,84 @@
+:root
+    {
+        --gab-blob:40px;
+        --blob-size:1.35;
+    }
+body{
+    background: #aaa;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.splash{
+    position: relative;
+    top:200px;
+    left:-500px;
+}
+.blobs{
+    position: absolute;
+    width: calc(var(--blob-size)*500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top:220px;
+    left:-40px;
+
+}
+.blob{
+    position: absolute;
+    height: calc(var(--blob-size)*414px);
+    -webkit-mask-image: url(../Imagens/blob.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: calc(var(--blob-size)*500px);
+}
+.blob.b1{
+    background: linear-gradient(135deg, #7e7df1, #1b2c5d);
+    z-index: -2;
+}
+.blob.b2{
+    background: linear-gradient(135deg, #000, #3533cd);
+    z-index: -3;
+    transform: translate(calc(var(--gab-blob)), calc(var(--gab-blob)));
+    
+}
+.blob-galaxia{
+    width: 100%;
+    background: url(../Imagens/Space.jpg);
+    background-size: auto;
+    background-repeat: round !important;
+    z-index: -4;
+    transform: translate(calc(var(--gab-blob)*2), calc(var(--gab-blob)*2));
+    
+    animation: 40s linear infinite galaxia;
+}
+.icons{
+    position: absolute;
+}
+.icon{
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+}
+.i1{      
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+.i2{
+    background: #777;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: -1;
+}
+@keyframes galaxia{
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: -100vw;
+    }
+}
