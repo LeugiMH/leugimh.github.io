@@ -8,7 +8,7 @@
     --sec1-height:100vh;
 }
 *{
-    font-weight: 700;
+    font-weight: 800;
     text-align: center;
     letter-spacing: 0.1rem;
 }
@@ -29,7 +29,6 @@ body
     height: var(--sec1-height);
     background: url(../Imagens/SistemaP.png);
     background-size: 100vw;
-    background-position:  0 100px;
     background-repeat: no-repeat;
     z-index: 1;
 }
@@ -42,9 +41,6 @@ body
     z-index: 11;
 }
 .splash{
-    display: block;
-    width: max-content;
-    height: max-content;
     position: absolute;
     bottom: calc(50% + 300px);
     left:5%;
@@ -52,25 +48,26 @@ body
 }
 .Nome{
     position: relative;
+    bottom: 30px;
     font-size: 1.5rem;
-    width: 800px;
+    width: 650px;
     height: max-content;
     background: #252045;
     color: white;
     transform: rotate(-7deg);
-    z-index: 4;
+    z-index: 12;
 }
 .Job{
     position: relative;
-    top: 10px;
+    bottom: 20px;
     left: -30px;
     font-size: 1.25rem;
-    width: 800px;
+    width: 650px;
     height: auto;
     background: #3D3E8B;
     color: white;
     transform: rotate(-7deg);
-    z-index: 4;
+    z-index: 12;
 }
 
 .icons{
@@ -136,33 +133,65 @@ body
         background-position-x: -100vw;
     }
 }
-@media only screen and (max-width:900px){
+@media only screen and (max-width:1000px){
     :root{
         --icon-size:calc(400px / 2);
         --blob-width:calc(500px / 2);
         --blob-height:calc(415px / 2);
         --gab-blob:calc(40px / 2);
-        --sec1-height:600px;
+        --sec1-height:calc(500px);
+    }
+    .Nome{
+        bottom: 20px;
+        font-size: 1rem;
+        width: 350px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        height: max-content;
+    }
+    .Job{
+        bottom: 10px;
+        font-size: 0.8rem;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+        width: 350px;
+        height: max-content;
     }
     .blobs{
         top:-30px;
     }
     .splash{
-        top:200px;
+        top: 130px;
     }
 }
-@media only screen and (max-width:400px){
+@media only screen and (max-width:500px){
     :root{
         --icon-size:calc(400px / 3);
         --blob-width:calc(500px / 3);
         --blob-height:calc(415px / 3);
         --gab-blob:calc(40px / 3);
-        --sec1-height:400px;
+        --sec1-height:300px;
+    }
+    .Nome{
+        bottom: 20px;
+        font-size: 0.8rem;
+        width: 200px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        height: max-content;
+    }
+    .Job{
+        bottom: 10px;
+        font-size: 0.6rem;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+        width: 200px;
+        height: max-content;
     }
     .blobs{
         top:-20px;
     }
     .splash{
-        top:170px;
+        top: 80px;
     }
 }
