@@ -9,7 +9,7 @@
 }
 body
 {
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 .sec1{
     background: radial-gradient( #fcfcff,#8473db);
@@ -125,98 +125,5 @@ body
     }
     100%{
         background-position-x: -100vw;
-    }
-}
-@media only screen and (min-width: 2000px) {
-    :root{
-        --icon-size:calc(400px * 2);
-        --blob-width:calc(500px * 2);
-        --blob-height:calc(415px * 2);
-        --gab-blob:calc(40px * 2);
-        --sec1-height:calc(900px * 2);
-    }
-    .Nome{
-        bottom: 20px;
-        font-size: 4rem;
-        width: 1200px;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-        height: max-content;
-    }
-    .Job{
-        bottom: 0;
-        font-size: 3rem;
-        padding-top: 2px !important;
-        padding-bottom: 2px !important;
-        width: 1200px;
-        height: max-content;
-    }
-    .blobs{
-        top:-30px;
-    }
-    .splash{
-        bottom: calc(50% + 700px);
-    }
-}
-@media only screen and (max-width:1000px){
-    :root{
-        --icon-size:calc(400px / 2);
-        --blob-width:calc(500px / 2);
-        --blob-height:calc(415px / 2);
-        --gab-blob:calc(40px / 2);
-        --sec1-height:calc(500px);
-    }
-    .Nome{
-        bottom: 20px;
-        font-size: 1rem;
-        width: 350px;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-        height: max-content;
-    }
-    .Job{
-        bottom: 10px;
-        font-size: 0.8rem;
-        padding-top: 2px !important;
-        padding-bottom: 2px !important;
-        width: 350px;
-        height: max-content;
-    }
-    .blobs{
-        top:-30px;
-    }
-    .splash{
-        top: 120px;
-    }
-}
-@media only screen and (max-width:500px){
-    :root{
-        --icon-size:calc(400px / 3);
-        --blob-width:calc(500px / 3);
-        --blob-height:calc(415px / 3);
-        --gab-blob:calc(40px / 3);
-        --sec1-height:300px;
-    }
-    .Nome{
-        bottom: 20px;
-        font-size: 0.8rem;
-        width: 200px;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
-        height: max-content;
-    }
-    .Job{
-        bottom: 20px;
-        font-size: 0.6rem;
-        padding-top: 2px !important;
-        padding-bottom: 2px !important;
-        width: 200px;
-        height: max-content;
-    }
-    .blobs{
-        top:-20px;
-    }
-    .splash{
-        top: 50px;
     }
 }
