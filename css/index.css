@@ -1,63 +1,84 @@
 :root
-    {
-        --gab-blob:40px;
-        --blob-size:1.35;
-    }
-body{
-    background: #aaa;
-    min-height: 100vh;
-    min-width: 100vw;
+{
+    --gab-blob:50px;
+    --blob-size:calc(1.5);
+    --blob-width:calc(500px);
+    --blob-height:calc(415px);
+    --icon-size:450px;
+    --sec1-height:100vh;
+}
+*{
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+body
+{
+    overflow-x: hidden;
+}
+.sec1{
+    background: radial-gradient( #fcfcff,#8473db);
+    min-height: var(--sec1-height);
+}
+.sec2{
+    min-height: 100px;
+}
+.sistemP{
+    position: absolute;
+    width: 100%;
+    height: var(--sec1-height);
+    background: url(../Imagens/SistemaP.png);
+    background-size: 100vw;
+    background-position:  0 100px;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.wave1{
+    position: relative;
     display: flex;
-    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: var(--sec1-height);
+    z-index: 11;
 }
 .splash{
+    display: block;
+    width: max-content;
+    height: max-content;
+    position: absolute;
+    bottom: calc(50% + 300px);
+    left:5%;
+    z-index: 10;
+}
+.Nome{
     position: relative;
-    top:200px;
-    left:-500px;
+    font-size: 1.5rem;
+    width: 800px;
+    height: max-content;
+    background: #252045;
+    color: white;
+    transform: rotate(-7deg);
+    z-index: 4;
 }
-.blobs{
-    position: absolute;
-    width: calc(var(--blob-size)*500px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top:220px;
-    left:-40px;
+.Job{
+    position: relative;
+    top: 10px;
+    left: -30px;
+    font-size: 1.25rem;
+    width: 800px;
+    height: auto;
+    background: #3D3E8B;
+    color: white;
+    transform: rotate(-7deg);
+    z-index: 4;
+}
 
-}
-.blob{
-    position: absolute;
-    height: calc(var(--blob-size)*414px);
-    -webkit-mask-image: url(../Imagens/blob.png);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: calc(var(--blob-size)*500px);
-}
-.blob.b1{
-    background: linear-gradient(135deg, #7e7df1, #1b2c5d);
-    z-index: -2;
-}
-.blob.b2{
-    background: linear-gradient(135deg, #000, #3533cd);
-    z-index: -3;
-    transform: translate(calc(var(--gab-blob)), calc(var(--gab-blob)));
-    
-}
-.blob-galaxia{
-    width: 100%;
-    background: url(../Imagens/Space.jpg);
-    background-size: auto;
-    background-repeat: round !important;
-    z-index: -4;
-    transform: translate(calc(var(--gab-blob)*2), calc(var(--gab-blob)*2));
-    
-    animation: 40s linear infinite galaxia;
-}
 .icons{
     position: absolute;
 }
 .icon{
-    height: 400px;
-    width: 400px;
+    height: var(--icon-size);
+    width: var(--icon-size);
     border-radius: 100%;
 }
 .i1{      
@@ -68,17 +89,80 @@ body{
     z-index: 1;
 }
 .i2{
-    background: #777;
+    background: #bbb;
     position: absolute;
     top: 10px;
     left: 10px;
     z-index: -1;
 }
+.blobs{
+    position: relative;
+    width: calc(var(--blob-size)*var(--blob-width));
+    top: -70px;
+    left: 0px;
+}
+.blob{
+    position: absolute;
+
+    height: calc(var(--blob-size)*var(--blob-height));
+    -webkit-mask-image: url(../Imagens/blob.png);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: calc(var(--blob-size)*var(--blob-width));
+}
+.blob.b1{
+    background: linear-gradient(135deg, #7e7df1, #111d3f);
+    z-index: -2;
+}
+.blob.b2{
+    background: linear-gradient(135deg, #000, #2523a0);
+    z-index: -3;
+    transform: translate(calc(var(--gab-blob)), calc(var(--gab-blob)));  
+}
+.blob-galaxia{
+    background: url(../Imagens/Space.jpg);
+    background-size: auto;
+    background-repeat: round !important;
+    z-index: -4;
+    transform: translate(calc(var(--gab-blob)*2), calc(var(--gab-blob)*2));
+
+    animation: 50s linear infinite galaxia !important;
+}
+
 @keyframes galaxia{
     0%{
-        background-position-x: 0;
+        background-position-x: 0px;
     }
     100%{
         background-position-x: -100vw;
+    }
+}
+@media only screen and (max-width:900px){
+    :root{
+        --icon-size:calc(400px / 2);
+        --blob-width:calc(500px / 2);
+        --blob-height:calc(415px / 2);
+        --gab-blob:calc(40px / 2);
+        --sec1-height:600px;
+    }
+    .blobs{
+        top:-30px;
+    }
+    .splash{
+        top:200px;
+    }
+}
+@media only screen and (max-width:400px){
+    :root{
+        --icon-size:calc(400px / 3);
+        --blob-width:calc(500px / 3);
+        --blob-height:calc(415px / 3);
+        --gab-blob:calc(40px / 3);
+        --sec1-height:400px;
+    }
+    .blobs{
+        top:-20px;
+    }
+    .splash{
+        top:170px;
     }
 }
