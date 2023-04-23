@@ -1,0 +1,19 @@
+.h{
+    font-family: 'Bungee';
+}
+.glitch{
+    color: #7843E6;
+    text-shadow: 
+        2px -2px #00FFFF, 
+        -2px 2px#FF00FF;
+}
+p{
+    font-family: 'poppins';
+    letter-spacing: 1px;
+}
+.Nome,.Job{
+    font-family: 'poppins';
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-weight: 900;
+}

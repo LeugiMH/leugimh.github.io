@@ -5,12 +5,7 @@
     --blob-width:calc(500px);
     --blob-height:calc(415px);
     --icon-size:450px;
-    --sec1-height:100vh;
-}
-*{
-    font-weight: 800;
-    text-align: center;
-    letter-spacing: 0.1rem;
+    --sec1-height:950px;
 }
 body
 {
@@ -42,14 +37,13 @@ body
 }
 .splash{
     position: absolute;
-    bottom: calc(50% + 300px);
+    top: 100px;
     left:5%;
     z-index: 10;
 }
 .Nome{
     position: relative;
     bottom: 30px;
-    font-size: 1.5rem;
     width: 650px;
     height: max-content;
     background: #252045;
@@ -61,7 +55,6 @@ body
     position: relative;
     bottom: 20px;
     left: -30px;
-    font-size: 1.25rem;
     width: 650px;
     height: auto;
     background: #3D3E8B;
@@ -95,6 +88,7 @@ body
 .blobs{
     position: relative;
     width: calc(var(--blob-size)*var(--blob-width));
+    height: fit-content;
     top: -70px;
     left: 0px;
 }
@@ -133,6 +127,37 @@ body
         background-position-x: -100vw;
     }
 }
+@media only screen and (min-width: 2000px) {
+    :root{
+        --icon-size:calc(400px * 2);
+        --blob-width:calc(500px * 2);
+        --blob-height:calc(415px * 2);
+        --gab-blob:calc(40px * 2);
+        --sec1-height:calc(900px * 2);
+    }
+    .Nome{
+        bottom: 20px;
+        font-size: 4rem;
+        width: 1200px;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        height: max-content;
+    }
+    .Job{
+        bottom: 0;
+        font-size: 3rem;
+        padding-top: 2px !important;
+        padding-bottom: 2px !important;
+        width: 1200px;
+        height: max-content;
+    }
+    .blobs{
+        top:-30px;
+    }
+    .splash{
+        bottom: calc(50% + 700px);
+    }
+}
 @media only screen and (max-width:1000px){
     :root{
         --icon-size:calc(400px / 2);
@@ -161,7 +186,7 @@ body
         top:-30px;
     }
     .splash{
-        top: 130px;
+        top: 120px;
     }
 }
 @media only screen and (max-width:500px){
@@ -181,7 +206,7 @@ body
         height: max-content;
     }
     .Job{
-        bottom: 10px;
+        bottom: 20px;
         font-size: 0.6rem;
         padding-top: 2px !important;
         padding-bottom: 2px !important;
@@ -192,6 +217,6 @@ body
         top:-20px;
     }
     .splash{
-        top: 80px;
+        top: 50px;
     }
 }
