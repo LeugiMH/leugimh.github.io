@@ -2,18 +2,61 @@
     font-family: 'Bungee';
 }
 .glitch{
-    color: #7843E6;
+    color: var(--cor-destaque);
     text-shadow: 
         2px -2px #00FFFF, 
         -2px 2px#FF00FF;
 }
+.glow{
+    word-spacing: 2rem;
+    color: var(--cor2);
+    text-shadow: 
+        0 0 20px white,
+        10px 10px white;
+    -webkit-text-stroke: 2px white;
+}
+.destaque{
+    color: var(--cor-destaque);
+}
+.slide{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    white-space: nowrap;
+    text-align: center;
+}
+.slide h1{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    white-space: nowrap;
+    text-align: jus;
+    
+
+    animation: slide 10s linear infinite;
+}
+.slide2 h1{
+    animation-delay: 5s;
+}
 p{
     font-family: 'poppins';
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.1rem;
 }
 .Nome,.Job{
     font-family: 'poppins';
     text-align: center;
     letter-spacing: 0.1rem;
     font-weight: 900;
+}
+@keyframes slide {
+    0%{
+        transform: translate(-100%,0);
+    }
+    100%{
+        transform: translate(100%,0);
+    }
 }

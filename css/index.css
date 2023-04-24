@@ -6,6 +6,10 @@
     --blob-height:calc(415px);
     --icon-size:450px;
     --sec1-height:950px;
+    --cor1:#252045;
+    --cor2:#3D3E8B;
+    --cor3:#11092C;
+    --cor-destaque:#7843E6;
 }
 body
 {
@@ -16,7 +20,20 @@ body
     min-height: var(--sec1-height);
 }
 .sec2{
-    min-height: 100px;
+    background:var(--cor3);
+}
+.sec3{
+    background: var(--cor2);
+}
+.slideContainer{
+    width: 100%;
+    height: 100%;
+}
+.slideLine{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
 }
 .sistemP{
     position: absolute;
@@ -31,7 +48,6 @@ body
     position: relative;
     display: flex;
     align-items: end;
-    width: 100%;
     height: var(--sec1-height);
     z-index: 11;
 }
@@ -40,13 +56,14 @@ body
     top: 100px;
     left:5%;
     z-index: 10;
+    transition: linear;
 }
 .Nome{
     position: relative;
     bottom: 30px;
     width: 650px;
     height: max-content;
-    background: #252045;
+    background: var(--cor1);
     color: white;
     transform: rotate(-7deg);
     z-index: 12;
@@ -57,7 +74,7 @@ body
     left: -30px;
     width: 650px;
     height: auto;
-    background: #3D3E8B;
+    background: var(--cor2);
     color: white;
     transform: rotate(-7deg);
     z-index: 12;
@@ -117,6 +134,18 @@ body
     transform: translate(calc(var(--gab-blob)*2), calc(var(--gab-blob)*2));
 
     animation: 50s linear infinite galaxia !important;
+}
+.img{
+    border-radius: 10%;
+    transition: 500ms;
+}
+.img:hover{
+    transform: translate(0,-10px);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    
 }
 
 @keyframes galaxia{
