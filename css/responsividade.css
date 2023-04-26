@@ -106,4 +106,7 @@
     .icone{
         font-size: 50px;
     }
+    .contato-texto{
+        font-size: .6rem !important;
+    }
 }
