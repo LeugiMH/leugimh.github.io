@@ -7,19 +7,19 @@
         --sec1-height:calc(900px * 2);
     }
     .Nome{
-        bottom: 20px;
         font-size: 4rem;
         width: 1200px;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        transform: rotate(-7deg) translateY(-20px);
         height: max-content;
     }
     .Job{
-        bottom: 0;
         font-size: 3rem;
-        padding-top: 2px !important;
-        padding-bottom: 2px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
         width: 1200px;
+        transform: rotate(-7deg) translate(-60px,0px);
         height: max-content;
     }
     .blobs{
@@ -38,19 +38,19 @@
         --sec1-height:calc(500px);
     }
     .Nome{
-        bottom: 20px;
         font-size: 1rem;
         width: 350px;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        transform: rotate(-7deg) translate(0, -20px);
         height: max-content;
     }
     .Job{
-        bottom: 10px;
         font-size: 0.8rem;
-        padding-top: 2px !important;
-        padding-bottom: 2px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
         width: 350px;
+        transform: rotate(-7deg) translate(-30, -10px);
         height: max-content;
     }
     .blobs{
@@ -58,6 +58,16 @@
     }
     .splash{
         top: 120px;
+    }
+    .sec4{
+        background-size: 90%;
+        background-position: -100px 100px;
+    }
+    .astronauta{
+        width: 90%;
+    }
+    .contato-texto{
+        font-size: .8rem !important;
     }
 }
 @media only screen and (max-width:500px){
@@ -72,15 +82,15 @@
         bottom: 20px;
         font-size: 0.8rem;
         width: 200px;
-        padding-top: 5px !important;
-        padding-bottom: 5px !important;
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
         height: max-content;
     }
     .Job{
         bottom: 20px;
         font-size: 0.6rem;
-        padding-top: 2px !important;
-        padding-bottom: 2px !important;
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
         width: 200px;
         height: max-content;
     }
@@ -92,5 +102,8 @@
     }
     .h{
         font-size: 1.5rem;
+    }
+    .icone{
+        font-size: 50px;
     }
 }

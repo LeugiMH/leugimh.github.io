@@ -19,44 +19,38 @@
     color: var(--cor-destaque);
 }
 .slide{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    white-space: nowrap;
+    transform: rotate(-10deg);
+    z-index: 0;
+    position: relative;
+}
+.slideRow{
+    position: relative;
     text-align: center;
+    transform: translateX(-100%);
 }
 .slide h1{
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    margin: auto;
+    font-size: 10vw;
     white-space: nowrap;
-    text-align: jus;
-    
-
-    animation: slide 10s linear infinite;
-}
-.slide2 h1{
-    animation-delay: 5s;
+    user-select: none;
 }
 p{
     font-family: 'poppins';
     letter-spacing: 0.1rem;
     word-spacing: 0.1rem;
+    line-height: 2rem !important;
+}
+a{
+    text-decoration: none;
+}
+.icone{
+    font-size: 100px;
+}
+.contato-texto{
+    font-size: 1.5rem;
 }
 .Nome,.Job{
     font-family: 'poppins';
     text-align: center;
     letter-spacing: 0.1rem;
     font-weight: 900;
-}
-@keyframes slide {
-    0%{
-        transform: translate(-100%,0);
-    }
-    100%{
-        transform: translate(100%,0);
-    }
 }

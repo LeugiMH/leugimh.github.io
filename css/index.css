@@ -24,6 +24,13 @@ body
 }
 .sec3{
     background: var(--cor2);
+    overflow: hidden;
+}
+.sec4{
+    background-image: url(../Imagens/planeta.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: -300px 25%;
 }
 .slideContainer{
     width: 100%;
@@ -51,6 +58,10 @@ body
     height: var(--sec1-height);
     z-index: 11;
 }
+.onda{
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
 .splash{
     position: absolute;
     top: 100px;
@@ -60,23 +71,20 @@ body
 }
 .Nome{
     position: relative;
-    bottom: 30px;
     width: 650px;
-    height: max-content;
+    height: auto;
     background: var(--cor1);
     color: white;
-    transform: rotate(-7deg);
+    transform: rotate(-7deg) translate(0, -30px);
     z-index: 12;
 }
 .Job{
     position: relative;
-    bottom: 20px;
-    left: -30px;
     width: 650px;
     height: auto;
     background: var(--cor2);
     color: white;
-    transform: rotate(-7deg);
+    transform: rotate(-7deg) translate(-30px, -20px);
     z-index: 12;
 }
 
@@ -139,13 +147,36 @@ body
     border-radius: 10%;
     transition: 500ms;
 }
+.slideContainer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 .img:hover{
     transform: translate(0,-10px);
     cursor: pointer;
 }
-a{
-    text-decoration: none;
-    
+.astronauta{
+    position: relative;
+    transform: rotateY(180deg) translateY(-25%);
+    transform:;
+}
+.contatos{
+    color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 100ms;
+}
+.contatos:hover{
+    filter: brightness(90%);
+}
+.contatos:nth-child(even){
+    background-color: var(--cor3);
+    border: var(--cor3) solid 5px;
+}
+.contatos:nth-child(odd){
+    background-color: var(--cor2);
+    border: var(--cor2) solid 5px;
 }
 
 @keyframes galaxia{
