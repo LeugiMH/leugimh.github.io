@@ -109,4 +109,10 @@
     .contato-texto{
         font-size: .6rem !important;
     }
+    .glitch{
+        color: var(--cor-destaque);
+        text-shadow: 
+            1px -1px #00FFFF, 
+            -1px 1px#FF00FF;
+    }
 }
