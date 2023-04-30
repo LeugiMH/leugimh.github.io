@@ -10,7 +10,7 @@ addEventListener("mousemove", (e) => {
     document.querySelectorAll("[data-slide]").forEach(function(obj){
             var movingValue = obj.getAttribute("data-slide");
 
-            var x = ((e.clientX * movingValue)/10);
+            var x = ((e.clientX * movingValue)/1);
 
             obj.style.left = x+"px";
         });
