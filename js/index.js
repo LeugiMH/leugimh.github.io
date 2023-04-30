@@ -12,7 +12,7 @@ addEventListener("mousemove", (e) => {
 
             var x = ((e.clientX * movingValue)/1);
 
-            obj.style.left = x+"px";
+            obj.style.transform = "translateX("+x+"px)";
         });
     
 });
