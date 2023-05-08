@@ -54,7 +54,7 @@ window.addEventListener("deviceorientation", (e) => {
     document.querySelectorAll("[data-paralax]").forEach(function(obj){
         var movingValue = obj.getAttribute("data-paralax");
         var x = (gamma * movingValue) / 15;
-        var y = ((beta - 90) * movingValue) / 20;
+        var y = ((beta - 45) * movingValue) / 20;
 
         obj.style.left = x+"px";
         obj.style.top = y+"px";
