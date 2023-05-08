@@ -42,9 +42,9 @@ window.addEventListener("deviceorientation", (e) => {
     const ap = document.getElementById("alpha");
     const gb = document.getElementById("gamma");
     const bt = document.getElementById("beta");
-    let alpha = e.alpha; // eixo Z
-    let gamma = e.gamma; // eixo Y
-    let beta = e.beta // eixo X
+    var alpha = Math.round(e.alpha); // eixo Z
+    var gamma = Math.round(e.gamma); // eixo Y
+    var beta = Math.round(e.beta); // eixo X
 
     ap.innerText = "Alpha Z" + alpha;
     gb.innerText = "Gamma Y" + gamma;
