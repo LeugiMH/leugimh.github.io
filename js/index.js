@@ -52,8 +52,8 @@ window.addEventListener("deviceorientation", (e) => {
 
     document.querySelectorAll("[data-paralax]").forEach(function(obj){
         var movingValue = obj.getAttribute("data-paralax");
-        var x = (alpha * movingValue) / 230;
-        var y = (gamma * movingValue) / 250;
+        var x = (beta * movingValue) / 2;
+        var y = (gamma * movingValue) / 2;
 
         obj.style.left = x+"px";
         obj.style.top = y+"px";
@@ -61,7 +61,7 @@ window.addEventListener("deviceorientation", (e) => {
     document.querySelectorAll("[data-slide]").forEach(function(obj){
         var movingValue = obj.getAttribute("data-slide");
 
-        var x = ((alpha * movingValue) / 1);
+        var x = ((gamma * movingValue) * 2);
 
         obj.style.transform = "translateX("+x+"px)";
     });
