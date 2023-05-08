@@ -42,13 +42,13 @@ window.addEventListener("deviceorientation", (e) => {
     const ap = document.getElementById("alpha");
     const gb = document.getElementById("gamma");
     const bt = document.getElementById("beta");
-    let alpha = e.alpha;
-    let gamma = e.gamma;
-    let beta = e.beta
+    let alpha = e.alpha; // eixo Z
+    let gamma = e.gamma; // eixo Y
+    let beta = e.beta // eixo X
 
-    ap.innerText = alpha;
-    gb.innerText = gamma;
-    bt.innerText = beta;
+    ap.innerText = "Alpha Z" + alpha;
+    gb.innerText = "Gamma Y" + gamma;
+    bt.innerText = "Beta X" + beta;
 
     document.querySelectorAll("[data-paralax]").forEach(function(obj){
         var movingValue = obj.getAttribute("data-paralax");
