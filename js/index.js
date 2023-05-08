@@ -19,6 +19,7 @@ addEventListener("mousemove", (e) => {
     
 });
 //No touch
+/*
 addEventListener("touchmove", (e) => {
     document.querySelectorAll("[data-paralax]").forEach(function(obj){
         var movingValue = obj.getAttribute("data-paralax");
@@ -36,7 +37,7 @@ addEventListener("touchmove", (e) => {
         obj.style.transform = "translateX("+x+"px)";
     });
 
-});
+});*/
 //Giroscópio
 window.addEventListener("deviceorientation", (e) => {
     const ap = document.getElementById("alpha");
