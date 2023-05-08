@@ -115,4 +115,10 @@
             1px -1px #00FFFF, 
             -1px 1px#FF00FF;
     }
+    .glow{
+        word-spacing: 1rem;
+        text-shadow: 
+        4px 4px #fff;
+        line-height: 50px;
+    }
 }
