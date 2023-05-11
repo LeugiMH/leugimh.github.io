@@ -40,25 +40,20 @@ addEventListener("touchmove", (e) => {
 });*/
 //Giroscópio
 addEventListener("deviceorientation", (e) => {
-     // Exibir os valores de giro dos valores de  giro 
-    const ap = document.getElementById("alpha");
-    const gb = document.getElementById("gamma");
-    const bt = document.getElementById("beta");
-    
     var alpha = Math.round(e.alpha); // eixo Z
     var gamma = Math.round(e.gamma); // eixo Y
     var beta = Math.round(e.beta); // eixo X
 
-if(gamma > 89){
-    gamma = 88;
-}
-if (gamma < -89){
-    gamma = -88;
-}
-
+    /* // Exibir os valores de giro dos valores de  giro 
+    const ap = document.getElementById("alpha");
+    const gb = document.getElementById("gamma");
+    const bt = document.getElementById("beta");
+    
     ap.innerText = "Alpha Z" + alpha;
     gb.innerText = "Gamma Y" + gamma;
     bt.innerText = "Beta X" + beta;
+    */
+
     document.querySelectorAll("[data-paralax]").forEach(function(obj){
         var movingValue = obj.getAttribute("data-paralax");
         var x = (gamma * movingValue) / 15;
