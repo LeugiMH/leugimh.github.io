@@ -40,7 +40,7 @@ addEventListener("touchmove", (e) => {
 });*/
 //Giroscópio
 addEventListener("deviceorientation", (e) => {
-    /* // Exibir os valores de giro dos valores de  giro 
+     // Exibir os valores de giro dos valores de  giro 
     const ap = document.getElementById("alpha");
     const gb = document.getElementById("gamma");
     const bt = document.getElementById("beta");
@@ -48,7 +48,7 @@ addEventListener("deviceorientation", (e) => {
     ap.innerText = "Alpha Z" + alpha;
     gb.innerText = "Gamma Y" + gamma;
     bt.innerText = "Beta X" + beta;
-    */
+    
     var alpha = Math.round(e.alpha); // eixo Z
     var gamma = Math.round(e.gamma); // eixo Y
     var beta = Math.round(e.beta); // eixo X
