@@ -13,7 +13,7 @@
 }
 body
 {
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 .sec1{
     background: radial-gradient( #fcfcff,#8473db);
@@ -159,7 +159,6 @@ body
 .astronauta{
     position: relative;
     transform: rotateY(180deg) translateY(-25%);
-    transform:;
 }
 .contatos{
     color: white;

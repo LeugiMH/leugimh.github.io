@@ -24,7 +24,6 @@
 }
 .slideRow{
     position: relative;
-    text-align: center;
     left: -100%;
 }
 .slide h1{
