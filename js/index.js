@@ -59,11 +59,6 @@ else if (gamma <= -90){
     ap.innerText = "Alpha Z" + alpha;
     gb.innerText = "Gamma Y" + gamma;
     bt.innerText = "Beta X" + beta;
-    
-    var alpha = Math.round(e.alpha); // eixo Z
-    var gamma = Math.round(e.gamma); // eixo Y
-    var beta = Math.round(e.beta); // eixo X
-
     document.querySelectorAll("[data-paralax]").forEach(function(obj){
         var movingValue = obj.getAttribute("data-paralax");
         var x = (gamma * movingValue) / 15;
