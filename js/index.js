@@ -49,11 +49,11 @@ addEventListener("deviceorientation", (e) => {
     var gamma = Math.round(e.gamma); // eixo Y
     var beta = Math.round(e.beta); // eixo X
 
-if(gamma => 90){
-    gamma = 90;
+if(gamma > 89){
+    gamma = 89;
 }
-else if (gamma <= -90){
-    gamma = -90;
+else if (gamma < -89){
+    gamma = -89;
 }
 
     ap.innerText = "Alpha Z" + alpha;
